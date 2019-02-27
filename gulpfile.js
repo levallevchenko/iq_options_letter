@@ -18,14 +18,14 @@ gulp.task('styles', function () {
 gulp.task('inky', function () {
   return gulp.src('./templates/**/*.html')
     .pipe(inky())
-    .pipe(gulp.dest('./build'));
+    .pipe(gulp.dest('./dist'));
 });
 
 //INLINE CSS
 gulp.task('inline', function () {
   return gulp.src('./dist/*.html')
         .pipe(inlineCss())
-        .pipe(gulp.dest('./inline'));
+        .pipe(gulp.dest('./build'));
 });
 
 gulp.task('image', function () {
